@@ -4,10 +4,14 @@ import streamlit as st
 st.title("My Blog")
 
 # Instructions for the user
-st.write("Copy and paste your blog post text below:")
+st.write("The blog content is read from the `blog_content.txt` file.")
 
-# Text input area for the user to paste the blog content
-blog_text = st.text_area("Blog Content", height=300)
+# Read the blog content from the text file
+try:
+    with open("blog_content.txt", "r") as file:
+        blog_text = file.read()
+except FileNotFoundError:
+    blog_text = "No blog content found. Please make sure `blog_content.txt` exists."
 
 # Display the blog content
 if blog_text:
