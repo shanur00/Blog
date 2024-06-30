@@ -14,5 +14,5 @@ except FileNotFoundError:
 
 # Display the blog content
 if blog_text:
-    st.write("### Blog Post")
+   # st.write("### Blog Post")
     st.markdown(blog_text)
