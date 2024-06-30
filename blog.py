@@ -1,10 +1,9 @@
 import streamlit as st
 
 # Set the title of the Streamlit app
-st.title("My Blog")
+st.title("Spring Boot")
 
-# Instructions for the user
-st.write("The blog content is read from the `blog_content.txt` file.")
+st.markdown("# Implementing PUT")
 
 # Read the blog content from the text file
 try:
